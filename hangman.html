@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Hangman Game</h1>
+    <div class="game-area">
+      <div class="status">
+        <div id="word" class="word"></div>
+        <div id="wrong" class="wrong">Wrong: <span id="wrong-letters"></span></div>
+      </div>
+      <div class="hangman-wrap">
+        <svg id="hangman" width="200" height="240" viewBox="0 0 200 240" aria-hidden="true">
+          <line x1="20" y1="220" x2="180" y2="220" class="g1"/>
+          <line x1="60" y1="220" x2="60" y2="20" class="g1"/>
+          <line x1="60" y1="20" x2="140" y2="20" class="g1"/>
+          <line x1="140" y1="20" x2="140" y2="45" class="g1"/>
+          <circle id="head" cx="140" cy="65" r="18" class="part"/>
+          <line id="body" x1="140" y1="83" x2="140" y2="140" class="part"/>
+          <line id="left-arm" x1="140" y1="95" x2="115" y2="120" class="part"/>
+          <line id="right-arm" x1="140" y1="95" x2="165" y2="120" class="part"/>
+          <line id="left-leg" x1="140" y1="140" x2="115" y2="180" class="part"/>
+          <line id="right-leg" x1="140" y1="140" x2="165" y2="180" class="part"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div id="keyboard" class="keyboard"></div>
+      <div class="actions">
+        <button id="new-game">New Game</button>
+        <button id="show-hint">Show Hint</button>
+      </div>
+      <div id="message" class="message"></div>
+    </div>
+
+    <footer>
+      <small>Made for practice • Eng tutorial style</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
